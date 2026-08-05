@@ -549,10 +549,10 @@ body{
 }
 
 .print-page{
-    width:1120px;
-    min-height:790px;
+    width:794px;
+    min-height:1123px;
     margin:0 auto 25px;
-    padding:24px 30px 16px;
+    padding:24px 26px 18px;
     background:#fff;
     color:#15222D;
     font-family:Arial,Tahoma,sans-serif;
@@ -797,7 +797,7 @@ body{
 
 .print-bottom-grid{
     display:grid;
-    grid-template-columns:1.1fr 1fr .9fr;
+    grid-template-columns:1.1fr 1fr;
     gap:8px;
     margin-top:11px;
 }
@@ -895,8 +895,8 @@ body{
 }
 
 .approval-item.stamp img{
-    width:120px;
-    height:120px;
+    width:150px;
+    height:150px;
 }
 
 /* =========================================================
@@ -1002,8 +1002,15 @@ body{
 
 @media print{
 
+    /* =====================================================
+       A4 PORTRAIT - حدود طباعة ثابتة وآمنة
+       مساحة الورق: 210 × 297mm
+       الهوامش: 8mm من جميع الجهات
+       مساحة المحتوى: 194 × 281mm
+    ===================================================== */
+
     @page{
-        size:A4 landscape;
+        size:A4 portrait;
         margin:8mm;
     }
 
@@ -1034,9 +1041,9 @@ body{
     }
 
     .print-page{
-        width:100% !important;
-        height:194mm !important;
-        min-height:194mm !important;
+        width:194mm !important;
+        height:281mm !important;
+        min-height:281mm !important;
         margin:0 !important;
         padding:0 !important;
         box-shadow:none !important;
@@ -1050,36 +1057,38 @@ body{
         break-after:auto;
     }
 
+    /* HEADER */
     .print-top{
         min-height:25mm;
         padding-bottom:3mm;
     }
 
     .print-logo{
-        width:42mm;
-        height:28mm;
+        width:38mm;
+        height:25mm;
     }
 
     .print-company-ar{
-        font-size:12pt;
+        font-size:11pt;
     }
 
     .print-company-en{
-        font-size:8.5pt;
+        font-size:7.5pt;
     }
 
     .print-company-sub{
-        font-size:6.5pt;
+        font-size:6pt;
     }
 
     .document-title h1{
-        font-size:20pt;
+        font-size:18pt;
     }
 
+    /* SECTION HEADINGS */
     .print-section-heading{
         margin-top:3mm;
         margin-bottom:1.5mm;
-        font-size:7pt;
+        font-size:6.5pt;
     }
 
     .print-meta-grid{
@@ -1092,94 +1101,130 @@ body{
     }
 
     .print-meta-label{
-        font-size:5.5pt;
+        font-size:6pt;
     }
 
     .print-meta-value{
-        font-size:7.5pt;
+        font-size:8pt;
     }
 
+    /* PARTIES */
     .party{
         min-height:24mm;
         padding:2.5mm 3mm;
     }
 
     .party-title{
-        font-size:7.5pt;
+        font-size:8pt;
     }
 
-    .party p{
-        font-size:6.5pt;
-        line-height:1.45;
-    }
-
-    .print-table{
-        margin-top:1.5mm;
-    }
-
-    .print-table th{
-        height:8mm;
-        font-size:5.5pt;
-    }
-
-    .print-table td{
-        height:7mm;
-        font-size:5.5pt;
-        padding:1mm .5mm;
-    }
-
-    .print-table tfoot th{
-        height:6.5mm;
-    }
-
-    .print-bottom-grid{
-        margin-top:3mm;
-    }
-
-    .print-summary-box{
-        min-height:20mm;
-        padding:2mm;
-    }
-
-    .print-summary-title{
+    .party-subtitle{
         font-size:6pt;
     }
 
+    .party p{
+        font-size:6pt;
+        line-height:1.4;
+    }
+
+    .party strong{
+        font-size:7pt;
+    }
+
+    /* TABLE - compact enough for portrait A4 */
+    .print-table{
+        margin-top:1.5mm;
+        font-size:6pt;
+    }
+
+    .print-table th{
+        height:7.5mm;
+        padding:1mm .35mm;
+        font-size:5.5pt;
+        line-height:1.15;
+    }
+
+    .print-table td{
+        height:6.5mm;
+        padding:.8mm .3mm;
+        font-size:5.5pt;
+        line-height:1.2;
+    }
+
+    .print-table tfoot th{
+        height:6mm;
+        font-size:5.5pt;
+    }
+
+    /* SUMMARY */
+    .print-bottom-grid{
+        margin-top:2.5mm;
+    }
+
+    .print-summary-box{
+        min-height:19mm;
+        padding:1.8mm;
+    }
+
+    .print-summary-title{
+        font-size:6.5pt;
+    }
+
+    .summary-lines{
+        gap:2.5px;
+    }
+
     .summary-line{
-        font-size:5.8pt;
+        font-size:6.2pt;
+        gap:6px;
+    }
+
+    .summary-line strong{
+        min-width:35px;
     }
 
     .certification{
-        font-size:5.8pt;
+        font-size:6.2pt;
+        line-height:1.5;
     }
 
+    /* APPROVAL + LARGE STAMP */
     .approval-area{
-        margin-top:3mm;
-        padding-top:2mm;
+        margin-top:2.5mm;
+        padding-top:1.8mm;
+        gap:12mm;
     }
 
     .approval-note{
-        font-size:5.8pt;
+        font-size:6.2pt;
+        line-height:1.5;
+    }
+
+    .approval-right{
+        gap:12mm;
     }
 
     .approval-item{
-        font-size:5.8pt;
+        min-width:28mm;
+        font-size:5.4pt;
     }
 
     .approval-item img{
-        width:30mm;
-        height:17mm;
+        width:27mm;
+        height:15mm;
+        margin-bottom:2mm;
     }
 
     .approval-item.stamp img{
-        width:32mm;
-        height:32mm;
+        width:40mm;
+        height:40mm;
     }
 
+    /* FOOTER */
     .print-footer{
         margin-top:2mm;
-        padding-top:1.5mm;
-        font-size:5pt;
+        padding-top:1.2mm;
+        font-size:5.2pt;
     }
 
     .page-number{
@@ -1187,6 +1232,125 @@ body{
         font-size:5.5pt;
     }
 }
+
+/* =========================================================
+   PORTRAIT PRINT - LARGE CONTENT / COMPACT TABLE
+========================================================= */
+@media print{
+    .print-section-heading{
+        font-size:8pt !important;
+        font-weight:800 !important;
+    }
+
+    .print-meta-label{font-size:6pt !important;}
+    .print-meta-value{
+        font-size:9pt !important;
+        font-weight:700 !important;
+        line-height:1.25 !important;
+        overflow-wrap:anywhere;
+        word-break:normal;
+    }
+
+    .party-title{
+        font-size:9pt !important;
+        font-weight:800 !important;
+    }
+    .party-subtitle{font-size:7.5pt !important;}
+    .party p{
+        font-size:8pt !important;
+        line-height:1.45 !important;
+        overflow-wrap:anywhere;
+        word-break:normal;
+    }
+    .party strong{font-size:8.5pt !important;}
+
+    /* جدول مضغوط مع خط أكبر ومنع تداخل الأعمدة */
+    .print-table{
+        width:100% !important;
+        table-layout:fixed !important;
+        border-collapse:collapse !important;
+        margin-top:1.5mm !important;
+    }
+
+    .print-table th,
+    .print-table td{
+        box-sizing:border-box !important;
+        vertical-align:middle !important;
+        overflow:hidden !important;
+        white-space:normal !important;
+        overflow-wrap:anywhere !important;
+        word-break:normal !important;
+    }
+
+    .print-table th{
+        height:7mm !important;
+        padding:.55mm .2mm !important;
+        font-size:6pt !important;
+        font-weight:800 !important;
+        line-height:1.05 !important;
+    }
+
+    .print-table td{
+        height:6mm !important;
+        padding:.4mm .2mm !important;
+        font-size:6pt !important;
+        line-height:1.1 !important;
+    }
+
+    .print-table tfoot th{
+        height:5.5mm !important;
+        padding:.4mm .2mm !important;
+        font-size:6pt !important;
+    }
+
+    .print-summary-title{
+        font-size:7pt !important;
+        font-weight:800 !important;
+    }
+
+    .summary-line{
+        font-size:7pt !important;
+        line-height:1.25 !important;
+    }
+
+    .summary-line strong{min-width:38px !important;}
+
+    .certification{
+        font-size:7pt !important;
+        line-height:1.45 !important;
+    }
+
+    .approval-note,
+    .approval-item{
+        font-size:7pt !important;
+    }
+
+    /* الختم أكبر */
+    .approval-item.stamp img{
+        width:48mm !important;
+        height:48mm !important;
+        max-width:48mm !important;
+        max-height:48mm !important;
+        object-fit:contain !important;
+    }
+
+    .print-footer{font-size:5.5pt !important;}
+    .page-number{font-size:6pt !important;}
+}
+
+/* المعاينة */
+#printArea .print-table{
+    table-layout:fixed;
+    width:100%;
+}
+#printArea .print-table th,
+#printArea .print-table td{
+    white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:normal;
+    vertical-align:middle;
+}
+
 </style>
 </head>
 
@@ -1610,7 +1774,7 @@ let productsData = {
    عدد الأصناف في كل صفحة.
 
    تم اختيار 7 أصناف حتى تكون الصفحة مرتبة
-   ولا تتجاوز حدود A4 Landscape.
+   ولا تتجاوز حدود A4 Portrait.
 */
 const ITEMS_PER_PRINT_PAGE = 7;
 
@@ -3306,29 +3470,6 @@ function createPrintPage(
                     <div class="print-summary-box">
 
                         <div class="print-summary-title">
-                            DOCUMENT DETAILS
-                        </div>
-
-                        <div class="summary-lines">
-
-                            <div class="summary-line">
-                                <span>Invoice</span>
-                                <strong>${escapeHTML(data.invoice)}</strong>
-                            </div>
-
-                            <div class="summary-line">
-                                <span>Date</span>
-                                <strong>${escapeHTML(data.date)}</strong>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="print-summary-box">
-
-                        <div class="print-summary-title">
                             CERTIFICATION
                         </div>
 
@@ -3472,14 +3613,14 @@ function preparePrintDocument(){
     printArea.innerHTML = "";
 
 
-    let rows =
-        data.rows;
-
-
     /*
        في حال لم توجد أصناف،
        ننشئ صفحة واحدة.
     */
+
+    let rows =
+        data.rows;
+
 
     if(!rows.length){
 
