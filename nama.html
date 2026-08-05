@@ -1886,6 +1886,198 @@ body{
 
 }
 
+
+/* =========================================================
+   NAMA PRINT / PREVIEW - LARGER CONTENT FONTS
+   الترويسة لا تتأثر بهذه التعديلات
+========================================================= */
+
+#printArea .print-section-title{
+    font-size:12px !important;
+    font-weight:900 !important;
+}
+
+#printArea .meta-label{
+    font-size:9px !important;
+}
+
+#printArea .meta-value{
+    font-size:14px !important;
+    line-height:1.3 !important;
+}
+
+#printArea .customer-block-header div{
+    font-size:10px !important;
+}
+
+#printArea .customer-column{
+    padding:10px 11px !important;
+}
+
+#printArea .customer-line{
+    font-size:10px !important;
+    line-height:1.45 !important;
+    margin-bottom:7px !important;
+}
+
+#printArea .customer-line .label{
+    font-size:10px !important;
+}
+
+#printArea .customer-line .value{
+    font-size:11.5px !important;
+    line-height:1.4 !important;
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+}
+
+#printArea .request-print-label{
+    font-size:9px !important;
+    font-weight:800 !important;
+}
+
+#printArea .request-print-value{
+    font-size:15px !important;
+    line-height:1.3 !important;
+}
+
+#printArea .request-print-box.phytosanitary-highlight
+.request-print-label{
+    font-size:9px !important;
+}
+
+#printArea .request-print-box.phytosanitary-highlight
+.request-print-value{
+    font-size:20px !important;
+    line-height:1.25 !important;
+}
+
+#printArea .notes-box{
+    font-size:10px !important;
+    line-height:1.65 !important;
+}
+
+#printArea .print-footer{
+    font-size:8px !important;
+    line-height:1.5 !important;
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print{
+
+    /* الترويسة print-header / print-title / print-company
+       متروكة بدون أي تغيير */
+
+    .print-section-title{
+        font-size:11px !important;
+        margin-top:13px !important;
+        margin-bottom:7px !important;
+    }
+
+    .document-meta{
+        gap:7px !important;
+        margin-top:9px !important;
+    }
+
+    .meta-box{
+        min-height:45px !important;
+        padding:6px 8px !important;
+    }
+
+    .meta-label{
+        font-size:8px !important;
+        margin-bottom:3px !important;
+    }
+
+    .meta-value{
+        font-size:13px !important;
+        line-height:1.25 !important;
+        overflow-wrap:anywhere !important;
+    }
+
+    /* بيانات العميل */
+    .customer-block-header div{
+        padding:5px 8px !important;
+        font-size:9.5px !important;
+    }
+
+    .customer-column{
+        min-height:86px !important;
+        padding:7px 9px !important;
+    }
+
+    .customer-line{
+        grid-template-columns:105px minmax(0,1fr) !important;
+        gap:6px !important;
+        margin-bottom:5px !important;
+        font-size:9.5px !important;
+        line-height:1.35 !important;
+    }
+
+    .customer-line .label{
+        font-size:9.5px !important;
+    }
+
+    .customer-line .value{
+        min-width:0 !important;
+        font-size:10.5px !important;
+        line-height:1.35 !important;
+        overflow-wrap:anywhere !important;
+        word-break:normal !important;
+    }
+
+    /* أرقام الطلبات */
+    .request-print-grid{
+        gap:6px !important;
+    }
+
+    .request-print-box{
+        min-height:51px !important;
+        padding:6px 7px !important;
+    }
+
+    .request-print-label{
+        font-size:8.5px !important;
+        line-height:1.15 !important;
+        margin-bottom:3px !important;
+    }
+
+    .request-print-value{
+        font-size:14px !important;
+        line-height:1.2 !important;
+        overflow-wrap:anywhere !important;
+        word-break:normal !important;
+    }
+
+    .request-print-box.phytosanitary-highlight
+    .request-print-label{
+        font-size:8.5px !important;
+    }
+
+    .request-print-box.phytosanitary-highlight
+    .request-print-value{
+        font-size:18px !important;
+        line-height:1.2 !important;
+    }
+
+    .notes-box{
+        min-height:60px !important;
+        padding:7px 9px !important;
+        font-size:9.5px !important;
+        line-height:1.55 !important;
+    }
+
+    .print-footer{
+        margin-top:13px !important;
+        padding-top:5px !important;
+        font-size:8px !important;
+    }
+}
+
 </style>
 
 </head>
